@@ -21,4 +21,7 @@ Backend contendo pedidos e clientes
 ![Teste DELETE](./docs/Delete.png)
 
 ### Tecnologias
- /Node.js
+ -Node.js
+ -VsCode (Thunder Client)
+ -JavaScript
+ -MVC
