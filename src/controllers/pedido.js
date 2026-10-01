@@ -1,6 +1,9 @@
 const pedidos = require("../../dados/pedidos.json")
 const itens = require("../../dados/itens.json")
 
+
+
+
 function calcTotais() {
     pedidos.forEach(p => {
         let total = 0
@@ -13,6 +16,9 @@ function calcTotais() {
     })
 }
 
+
+
+
 const criar = (req, res) => {
     const dados = req.body
     dados.id = Number(pedidos[pedidos.length - 1].id) + 1
@@ -20,10 +26,16 @@ const criar = (req, res) => {
     res.status(201).json(dados)
 }
 
+
+
+
 const listar = (req, res) => {
     calcTotais()
     res.json(pedidos)
 }
+
+
+
 
 const alterar = (req, res) => {
     const { id } = req.body
@@ -35,6 +47,9 @@ const alterar = (req, res) => {
     res.status(404).json({ mensagem: "Pedido não encontrado" })
 }
 
+
+
+
 const excluir = (req, res) => {
     const { id } = req.body
     const index = pedidos.findIndex(p => p.id == id)
@@ -44,6 +59,9 @@ const excluir = (req, res) => {
     }
     res.status(404).json({ mensagem: "Pedido não encontrado" })
 }
+
+
+
 
 module.exports = {
     criar, listar, alterar, excluir
