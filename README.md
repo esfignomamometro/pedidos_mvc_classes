@@ -19,3 +19,6 @@ Backend contendo pedidos e clientes
 
 ### DELETE (Excluir)
 ![Teste DELETE](./docs/Delete.png)
+
+### Tecnologias
+ /Node.js
